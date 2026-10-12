@@ -1,0 +1,216 @@
+/* ---------- 1. BASE (todas las páginas) ---------- */
+
+/* Reserva siempre el espacio de la barra de desplazamiento para que el menú no se mueva */
+html {
+    scrollbar-gutter: stable;
+}
+
+/* Fondo azul claro, fuente y márgenes laterales para el móvil */
+body {
+    background-color: #eef6fb;
+    color: #222222;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0 16px;
+    line-height: 1.5;
+}
+
+/* Título principal centrado */
+h1 {
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Subtítulos en azul Telegram */
+h2 {
+    color: #229ed9;
+}
+
+/* Párrafos centrados */
+main p {
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/* ---------- 2. MENÚ (igual en todas las páginas) ---------- */
+
+/* Lista del menú: elementos en horizontal y sin viñetas */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 0;
+    padding: 16px 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+/* Enlaces del menú: azul Telegram y sin subrayado */
+nav a {
+    color: #229ed9;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Subrayado al pasar el ratón por encima */
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------- 3. INICIO ---------- */
+
+/* Icono de Telegram al lado del nombre del bot */
+.icono {
+    display: inline;
+    width: 28px;
+    margin: 0 8px 0 0;
+    vertical-align: middle;
+}
+
+/* Captura del menú del bot: centrada y con un máximo de 300px */
+.foto-menu {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+
+/* ---------- 4. BOT ---------- */
+
+/* Espacio entre los elementos de la lista de categorías */
+.categorias li {
+    margin-bottom: 10px;
+}
+
+/* Espacio entre los pasos de la lista "Cómo se usa" */
+main ol li {
+    margin-bottom: 6px;
+}
+
+
+/* ---------- 5. CONTACTO ---------- */
+
+/* Título del formulario centrado */
+.titolo-contact {
+    text-align: center;
+}
+
+/* Colores de las tres líneas del título */
+.titolo-contact .verde {
+    color: #1a8f4c;
+}
+
+.titolo-contact .blu {
+    color: #5b42f3;
+}
+
+.titolo-contact .rojo {
+    color: #850000;
+}
+
+/* Campos del formulario a todo el ancho (border-box: el padding no los hace salir) */
+.input_field {
+    box-sizing: border-box;
+    width: 100%;
+    height: 42px;
+    padding: 0 0 0 12px;
+}
+
+/* Borde oscuro en el campo en el que se está escribiendo */
+.input_field:focus {
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 0px 1px #2B2B2F;
+    background-color: transparent;
+}
+
+/* Contenedor del botón: lo empuja a la derecha */
+.acciones {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+
+/* ---------- 6. BOTÓN "ENVIAR" (copiado de una librería) ---------- */
+
+/* Borde con degradado morado-azul */
+button {
+    align-items: center;
+    background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Quita el contorno del navegador al hacer clic y al pasar el ratón */
+button:active,
+button:hover {
+    outline: 0;
+}
+
+/* Parte interior oscura del botón (necesita el <span> en el HTML) */
+button span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+}
+
+/* Al pasar el ratón desaparece la parte oscura y se ve el degradado */
+button:hover span {
+    background: none;
+}
+
+/* Al hacer clic el botón se hace un poco más pequeño */
+button:active {
+    transform: scale(0.9);
+}
+
+
+/* ---------- 7. TABLET Y ORDENADOR (desde 768px) ---------- */
+
+/* Siempre al final: sobrescribe las reglas de arriba */
+@media (min-width: 768px) {
+
+    /* Contenido en una columna centrada de 800px como máximo */
+    body {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* Título más grande */
+    h1 {
+        font-size: 32px;
+    }
+
+    /* Texto más grande */
+    main p {
+        font-size: 20px;
+    }
+
+    /* Más espacio entre los elementos del menú */
+    nav ul {
+        gap: 32px;
+    }
+}

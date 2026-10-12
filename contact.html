@@ -4,57 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Formulario</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>NoticiasES_bot - Contacto</title>
 </head>
 
 <body>
-    <form>
-
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="bot.html">Bot</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
         <h1 class="titolo-contact">
-    <span class="verde">Rellena los campos aquí abajo.</span>
-    <span class="blu">Nuestro equipo se pondrá en contacto contigo</span>
-    <span class="rojo">lo más pronto posible.</span>
-</h1>
-
-
-        <fieldset>
-            <legend>
-                Información Personal
-            </legend>
-            <label for="nombre">Nombre</label>
-            <input class="input_field" type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre">
-
-            <label for="apellido">Apellido</label>
-            <input class="input_field" type="text" id="apellido" name="apellido" placeholder="Introduce tu apellido">
-
-            <label for="correo">Email</label>
-            <input class="input_field" type="email" id="correo" name="correo" placeholder="Tu mejor correo">
-
-            <label for="telefono">Telefono</label>
-            <input class="input_field" type="tel" id="telefono" name="telefono" placeholder="Introduce tu teléfono">
-
-            <label for="horario">Horario de contacto preferido</label>
-            <select class="input_field" name="horario" id="horario">
-                <option value="" disabled selected>Selecciona un horario</option>
-                <option value="mañana">08h-12h</option>
-                <option value="tarde">12h-16h</option>
-                <option value="noche">16h-21h</option>
-                <option value="indiferente">Lo más pronto posible</option>
-            </select>
-
-            </label>
-
-            <div style="display: flex; justify-content: flex-end; width: 100%; margin-top: 15px;">
-                <button type="submit">Enviar</button>
-            </div>
-
-
-        </fieldset>
-    </form>
-
- 
-<a href="index.html">←Vuelve a Inicio</a>
-</body>
-
-</html>
+            <span class="verde">Rellena los campos aquí abajo.</span>
+            <span class="blu">Nuestro equipo se pondrá en contacto contigo</span>
+            <span class="rojo">lo más pronto posible.</span>
+        </h1>
+        <p>Usa este formulario si quieres más información sobre el BOT,
+            tienes un problema con la suscripción o quieres proponernos
+            un nuevo periódico o una mejora.</p>
+            
+            <form>
+                
+                <fieldset>
+                    <legend>
+                        Información Personal
+                    </legend>
+                    <label for="nombre">Nombre</label>
+                    <input class="input_field" type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre">
+                    
+                    <label for="apellido">Apellido</label>
+                    <input class="input_field" type="text" id="apellido" name="apellido" placeholder="Introduce tu apellido">
+                    
+                    <label for="correo">Email</label>
+                    <input class="input_field" type="email" id="correo" name="correo" placeholder="Tu mejor correo">
+                    
+                    <label for="telefono">Teléfono</label>
+                    <input class="input_field" type="tel" id="telefono" name="telefono" placeholder="Introduce tu teléfono">
+                    
+                    <label for="descripcion">Descripción de tu consulta</label>
+                    <input class="input_field" id="descripcion" name="descripcion" placeholder="Describe tu consulta o problema" type="text">
+                    
+                    
+                    
+                    <div style="display: flex; justify-content: flex-end; width: 100%; margin-top: 15px;">
+                        <button type="submit">Enviar</button>
+                    </div>
+                    
+                    
+                </fieldset>
+            </form>
+            
+        </main>
+        
+    </body>
+    
+    </html>
